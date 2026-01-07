@@ -111,7 +111,77 @@ body {
 
 /* LOGO IMAGE */
 .logo {
-    max-width: 260px;
-    height: auto;
+    max-width: 240px;
+    margin-bottom: 10px;
 }
 
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 26px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+.right {
+    text-align: right;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    max-width: 420px;
+}
+.til {
+    width: 90px;
+    opacity: 0.8;
+}
+
+.til.top {
+    margin-bottom: 20px;
+}
+
+.til.bottom {
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
