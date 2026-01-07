@@ -1,28 +1,31 @@
-const images = [
-    'img/bg1.jpeg',
-    'img/bg2.jpeg',
-    'img/bg3.jpeg',
-    'img/bg4.jpeg',
-    'img/bg5.jpeg'
-];
+document.addEventListener('DOMContentLoaded', () => {
 
-let current = 0;
-const slider = document.querySelector('.slider');
+    const images = [
+        'img/bg1.jpeg',
+        'img/bg2.jpeg',
+        'img/bg3.jpeg',
+        'img/bg4.jpeg',
+        'img/bg5.jpeg'
+    ];
 
-// imagem inicial
-slider.style.backgroundImage = `url(${images[current]})`;
-slider.style.opacity = 1;
+    let current = 0;
+    const slider = document.querySelector('.slider');
 
-setInterval(() => {
-    // fade out
-    slider.style.opacity = 0;
+    if (!slider) return;
 
-    setTimeout(() => {
-        current = (current + 1) % images.length;
-        slider.style.backgroundImage = `url(${images[current]})`;
+    // imagem inicial
+    slider.style.backgroundImage = `url("${images[current]}")`;
+    slider.style.opacity = 1;
 
-        // fade in
-        slider.style.opacity = 1;
-    }, 1300);
+    setInterval(() => {
+        slider.style.opacity = 0;
 
-}, 7000);
+        setTimeout(() => {
+            current = (current + 1) % images.length;
+            slider.style.backgroundImage = `url("${images[current]}")`;
+            slider.style.opacity = 1;
+        }, 1300);
+
+    }, 7000);
+
+});
