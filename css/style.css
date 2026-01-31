@@ -240,6 +240,16 @@ body{
   .content{ grid-template-columns: 1fr; align-items: start; }
   .features{ grid-template-columns: 1fr; }
   .site-header{ top: 18px; left: 18px; }
-  .brand-logo{ width: 96px; }
+  .brand-logo{ display: none; }
   .left{ padding-top: 48px; }
 }
+
+
+
+/* MOBILE: esconder botão MORE INFO */
+@media (max-width: 768px) {
+    .btn-more-info {
+        display: none;
+    }
+}
+
